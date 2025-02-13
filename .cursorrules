@@ -55,6 +55,7 @@ File Structure:
 
 # Our .env variables
 - We have a .env file in the root of the project.
+- We have a .env.local file in the root of the project.
 - The .env file contains the following variables:
 - DATABASE_URL
 - NEXTAUTH_SECRET
@@ -63,8 +64,11 @@ File Structure:
 - AWS_ACCESS_KEY_ID
 - AWS_SECRET_ACCESS_KEY 
 
+# Current file structure
+- tree -L 4 -a -I 'node_modules|.git'
 
-#Naming Conventions
+
+# Naming Conventions
 - Use lowercase with dashes for directories (e.g., components/auth-wizard).
 - Favor named exports for components.
 
@@ -147,3 +151,14 @@ State Management:
 - use the latest version of the react-icons.
 - use the latest version of the react-icons.
         
+# GITHUB PUSH PROCESS
+- Step 1 : check if the current date 
+- Step 2 : use the currentdate for prefix filenaming like  feature/new-currentdate-feature
+- Step 3 : git checkout feature/new-currentdate-feature
+- Step 4 : git Create and Checkout Branch
+- Step 5 : git pull origin feature/new-currentdate-feature ( Only if you think the branch might already exist remotely, do git pull origin feature/new-2024-10-27-feature.  If it's a brand new branch you're creating today, skip this step.)
+- Step 6 : git add .
+- Step 7 : git commit -m "commit message with current time and date"
+- Step 8 : git push changes 
+- Step 9 :  Remove the redundant push.  You've already pushed in the previous step.
+- Step 10 : Remove the unnecessary pull.  You've just pushed your change

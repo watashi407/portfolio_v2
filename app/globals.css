@@ -1,21 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist&family=Geist+Mono&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-text-default: #FEFFFD;
+    --color-bg-default: #0C2424;
+    --color-bg-light: #0F2F2E;
+    --color-bg-highlight: #1F6663;
+    --color-object-dark: #371012;
+    --color-object-light: #B83B39;
+  }
+
+  .dark {
+    --color-text-default: #FEFFFD;
+    --color-bg-default: #0C2424;
+    --color-bg-light: #0F2F2E;
+    --color-bg-highlight: #1F6663;
+    --color-object-dark: #371012;
+    --color-object-light: #B83B39;
+  }
+
+  .light {
+    --color-text-default: #0C2424;
+    --color-bg-default: #FEFFFD;
+    --color-bg-light: #F0F0F0;
+    --color-bg-highlight: #E0E0E0;
+    --color-object-dark: #B83B39;
+    --color-object-light: #371012;
+  }
+
+  body {
+    background-color: #0C2424;
+    opacity: 1;
+    background-image:  linear-gradient(#0F2F2E 0.7000000000000001px, transparent 0.7000000000000001px), linear-gradient(to right, #0F2F2E 0.7000000000000001px, #0C2424 0.7000000000000001px);
+    background-size: 14px 14px;
+  }
+
+
+  code {
+    font-family: 'Geist Mono', monospace;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
